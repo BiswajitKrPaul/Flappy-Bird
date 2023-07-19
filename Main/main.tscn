@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://c61jqmxcu7w8"]
+
+[ext_resource type="Texture2D" uid="uid://c6ox46g45adow" path="res://sprites/background-day.png" id="1_mmjlk"]
+[ext_resource type="Script" path="res://Main/main.gd" id="1_xcmxk"]
+[ext_resource type="Texture2D" uid="uid://bv6nb2u3n6bwe" path="res://sprites/message.png" id="2_o6w70"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xcmxk")
+
+[node name="Background-day" type="Sprite2D" parent="."]
+position = Vector2(245, 443)
+scale = Vector2(2.14583, 2.00977)
+texture = ExtResource("1_mmjlk")
+
+[node name="Message" type="Sprite2D" parent="."]
+position = Vector2(240, 427)
+scale = Vector2(2, 2)
+texture = ExtResource("2_o6w70")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_play"]
