@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dk0rju2burbho"]
+[gd_scene load_steps=12 format=3 uid="uid://dk0rju2burbho"]
 
 [ext_resource type="Texture2D" uid="uid://cl5paoxcf4hee" path="res://sprites/redbird-downflap.png" id="1_55nx7"]
 [ext_resource type="Script" path="res://Bird/bird.gd" id="1_wagcq"]
 [ext_resource type="Texture2D" uid="uid://b5v6pr8yx4nu3" path="res://sprites/redbird-midflap.png" id="2_vh5y6"]
 [ext_resource type="Texture2D" uid="uid://df020fvgt63ln" path="res://sprites/redbird-upflap.png" id="3_ctdql"]
+[ext_resource type="AudioStream" uid="uid://bkjb4eejwcprx" path="res://audio/wing.ogg" id="5_pwkko"]
+[ext_resource type="AudioStream" uid="uid://yx35pvr2vgcg" path="res://audio/die.ogg" id="6_5tc22"]
+[ext_resource type="AudioStream" uid="uid://bgn37p71w2gf0" path="res://audio/hit.ogg" id="7_4ourd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t03j6"]
 animations = [{
@@ -69,3 +72,12 @@ shape = SubResource("CircleShape2D_en27h")
 libraries = {
 "": SubResource("AnimationLibrary_fw6io")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_pwkko")
+
+[node name="Player Die Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5tc22")
+
+[node name="Player Hit Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_4ourd")

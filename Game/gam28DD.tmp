@@ -37,6 +37,10 @@ texture = ExtResource("5_428cw")
 position = Vector2(260, 799)
 shape = SubResource("RectangleShape2D_gdj02")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
+position = Vector2(265, 4)
+shape = SubResource("RectangleShape2D_gdj02")
+
 [node name="SpawnU" type="Marker2D" parent="."]
 position = Vector2(540, 540)
 

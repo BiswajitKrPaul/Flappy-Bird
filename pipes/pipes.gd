@@ -2,6 +2,7 @@ extends Node2D
 
 const SCROLL_SPEED:float = 150
 var movePipes:bool = true
+@onready var point_collected_audio_player = $"Point Collected Audio Player"
 
 func _ready():
 	movePipes=true
@@ -23,6 +24,8 @@ func _on_body_entered(body):
 		body.die()
 
 
+
 func _on_body_exited(body):
 	if(body.is_in_group(GameManager.group_plane))==true:
 		GameManager._increase_score()
+		point_collected_audio_player.play()

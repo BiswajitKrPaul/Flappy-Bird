@@ -14,8 +14,8 @@ grow_vertical = 2
 script = ExtResource("1_xcmxk")
 
 [node name="Background-day" type="Sprite2D" parent="."]
-position = Vector2(245, 443)
-scale = Vector2(2.14583, 2.00977)
+position = Vector2(267.5, 448.249)
+scale = Vector2(2.30208, 2.03028)
 texture = ExtResource("1_mmjlk")
 
 [node name="Message" type="Sprite2D" parent="."]

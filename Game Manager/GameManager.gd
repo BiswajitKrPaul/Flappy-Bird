@@ -17,6 +17,7 @@ func changeToGameScene()->void:
 
 
 func changeToMainScene()->void:
+	_reset_score()
 	get_tree().change_scene_to_packed(mainScene)
 	
 
