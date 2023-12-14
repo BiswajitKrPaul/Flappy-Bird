@@ -11,4 +11,5 @@ offset_top = 8.0
 offset_right = 49.0
 offset_bottom = 48.0
 grow_horizontal = 2
+alignment = 1
 script = ExtResource("1_vkrvr")
